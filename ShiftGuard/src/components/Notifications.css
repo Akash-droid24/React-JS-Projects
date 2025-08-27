@@ -1,0 +1,33 @@
+.notifications {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: white;
+  animation: slideIn 0.5s forwards, fadeOut 0.5s 3s forwards;
+}
+
+.note.info { background: #17a2b8; }
+.note.success { background: #28a745; }
+.note.error { background: #dc3545; }
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+  to { transform: translateX(100%); opacity: 0; }
+}

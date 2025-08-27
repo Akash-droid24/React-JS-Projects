@@ -1,0 +1,27 @@
+.App {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f9fc;
+  min-height: 100vh;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.App.dark {
+  background-color: #1c1c1c;
+  color: #e0e0e0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease;
+}
+
+/* Apply smooth transition for all child elements */
+.main-container * {
+  transition: background-color 0.5s, color 0.5s, box-shadow 0.3s, transform 0.3s;
+}

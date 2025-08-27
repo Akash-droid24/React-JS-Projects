@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #f4f6f8, #e9f1ff);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+}
+
+:root {
+  --bg-color: #fdf6f0;
+  --text-color: #333;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.15);
+  --timeline-line: #007bff33;
+  --summary-bg: #007bff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1e1e2f;
+  --text-color: #f5f5f5;
+  --card-bg: #2c2c3e;
+  --card-shadow: rgba(0, 0, 0, 0.6);
+  --timeline-line: #00c6ff33;
+  --summary-bg: #00c6ff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+}

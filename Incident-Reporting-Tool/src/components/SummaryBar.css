@@ -1,0 +1,47 @@
+.summary-bar {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.summary-card {
+  flex: 1;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.summary-card p {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Different colors for cards */
+.summary-card.p1 {
+  background: linear-gradient(135deg, #ff1e56, #ff5757);
+  box-shadow: 0px 4px 15px rgba(255, 30, 86, 0.4);
+}
+
+.summary-card.p2 {
+  background: linear-gradient(135deg, #ff9f1c, #ffb347);
+  box-shadow: 0px 4px 15px rgba(255, 159, 28, 0.4);
+}
+
+.summary-card.resolved {
+  background: linear-gradient(135deg, #06d6a0, #1dd1a1);
+  box-shadow: 0px 4px 15px rgba(6, 214, 160, 0.4);
+}
+
+.summary-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+}

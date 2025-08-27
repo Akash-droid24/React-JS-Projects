@@ -1,0 +1,96 @@
+.incident-list-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f0f4ff, #e6f0ff);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  animation: fadeInUp 0.8s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-title {
+  font-size: 2rem;
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.list-title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #00c6ff;
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+  animation: slideIn 0.8s ease forwards;
+}
+
+@keyframes slideIn {
+  0% { width: 0; }
+  100% { width: 60px; }
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.2rem;
+  border: 2px solid #007bff;
+  background: transparent;
+  color: #007bff;
+  font-weight: 500;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.filter-btn:hover {
+  background: #007bff;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+.filter-btn.active {
+  background: linear-gradient(45deg, #007bff, #00c6ff);
+  color: white;
+  border-color: #00c6ff;
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+}
+
+.incident-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  justify-items: center;
+}
+
+.no-incident {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  opacity: 0.8;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
